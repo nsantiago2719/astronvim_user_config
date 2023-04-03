@@ -10,7 +10,7 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    tag = "0.1.1"
+    tag = "0.1.1",
   },
   {
     "nvim-neorg/neorg",
@@ -22,26 +22,25 @@ return {
           ["core.norg.dirman"] = {
             config = {
               workspaces = {
-                work = "~/notes/work"
-              }
-            }
+                work = "~/notes/work",
+                personal = "~/notes/personal",
+              },
+            },
           },
           ["core.presenter"] = {
             config = {
               zen_mode = "truezen",
             },
           },
-        }
+        },
       }
     end,
   },
   {
     "Pocco81/true-zen.nvim",
-	  config = function()
-		   require("true-zen").setup {}
-	  end,
-	  event = "User AstroFile"
-  }
+    config = function() require("true-zen").setup {} end,
+    event = "User AstroFile",
+  },
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   -- "andweeb/presence.nvim",
